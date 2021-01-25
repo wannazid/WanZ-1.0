@@ -42,6 +42,11 @@ elif pilih == '2':
       url = input("Masukan IP Web : ")
       connect = requests.get("https://api.hackertarget.com/reverseiplookup/?q="+url)
       print(connect.text)
+      createfile = open("Hasil Rev IP.txt","w")
+      createfile.write(connect.text)
+      createfile.close()
+      print("[+] Reverse IP Berhasil Silahkan Buka Folder Tools Ini Berada")
+      print("[+] Hasil Dengan Nama : Hasil Rev.txt")
 elif pilih == '3':
     print("-------------Detect Theme WordPress-------------")
     print("_________________________________________________________________")
